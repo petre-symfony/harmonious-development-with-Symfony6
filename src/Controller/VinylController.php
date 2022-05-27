@@ -11,8 +11,8 @@ class VinylController {
 		return new Response('Title: PB and Jams');
 	}
 
-	#[Route('/browse/death-metal')]
-	public function browse(): Response {
-		return new Response('Breakup vinyl? Angsty 90s rock? Browse the collection!');
+	#[Route('/browse/{slug}')]
+	public function browse(string $slug): Response {
+		return new Response('Genre: ' . $slug);
 	}
 }
