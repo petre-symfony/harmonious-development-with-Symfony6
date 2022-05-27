@@ -19,7 +19,7 @@ class VinylController {
 		} else {
 			$title = "All Genres";
 		}
-		
+
 		return new Response($title);
 	}
 }
