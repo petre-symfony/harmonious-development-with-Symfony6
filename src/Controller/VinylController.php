@@ -13,6 +13,8 @@ class VinylController {
 
 	#[Route('/browse/{slug}')]
 	public function browse(string $slug): Response {
-		return new Response('Genre: ' . $slug);
+		$title = str_replace('-', ' ', $slug);
+
+		return new Response('Genre: ' . $title);
 	}
 }
