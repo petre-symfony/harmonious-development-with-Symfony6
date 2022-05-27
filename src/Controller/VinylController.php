@@ -11,12 +11,12 @@ class VinylController extends AbstractController {
 	#[Route('/')]
 	public function homepage(): Response {
 		$tracks = [
-			'Gangsta\'s Paradise - Coolio',
-			'Waterfalls - TLC',
-			'Creep - Radiohead',
-			'Kiss from a Rose - Seal',
-			'On Bended Knee - Boyz II Men',
-			'Fantasy - Mariah Carey',
+			['song' => 'Gangsta\'s Paradise', 'artist' => 'Coolio'],
+			['song' => 'Waterfalls', 'artist' => 'TLC'],
+			['song' => 'Creep', 'artist' => 'Radiohead'],
+			['song' => 'Kiss from a Rose', 'artist' =>  'Seal'],
+			['song' => 'On Bended Knee', 'artist' => 'Boyz II Men'],
+			['song' => 'Fantasy', 'artist' => 'Mariah Carey'],
 		];
 
 		return $this->render('vinyl/homepage.html.twig', [
