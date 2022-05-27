@@ -10,8 +10,18 @@ use function Symfony\Component\String\u;
 class VinylController extends AbstractController {
 	#[Route('/')]
 	public function homepage(): Response {
+		$tracks = [
+			'Gangsta\'s Paradise - Coolio',
+			'Waterfalls - TLC',
+			'Creep - Radiohead',
+			'Kiss from a Rose - Seal',
+			'On Bended Knee - Boyz II Men',
+			'Fantasy - Mariah Carey',
+		];
+
 		return $this->render('vinyl/homepage.html.twig', [
-			'title' => 'PB & Jams'
+			'title' => 'PB & Jams',
+			'tracks' => $tracks
 		]);
 	}
 
