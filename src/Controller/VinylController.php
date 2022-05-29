@@ -19,15 +19,13 @@ class VinylController extends AbstractController {
 			['song' => 'Fantasy', 'artist' => 'Mariah Carey'],
 		];
 
-		dump($tracks);
-
 		return $this->render('vinyl/homepage.html.twig', [
 			'title' => 'PB & Jams',
 			'tracks' => $tracks
 		]);
 	}
 
-	#[Route('/browse/{slug}')]
+	#[Route('/browse/{slug}', name: 'app_browse')]
 	public function browse(string $slug = null): Response {
 
 		$genre = $slug ? u(str_replace('-', ' ', $slug))->title() : null;
