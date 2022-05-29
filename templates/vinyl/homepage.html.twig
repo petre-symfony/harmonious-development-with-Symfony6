@@ -7,7 +7,7 @@
 	<ul>
 		{% for track in tracks %}
 			<li>
-				{{ track.song }} - {{ track.artist }}
+				{{ track.song }} - {{ track.artist|upper|lower }}
 			</li>
 		{% endfor %}
 	</ul>
