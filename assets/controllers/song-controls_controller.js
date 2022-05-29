@@ -10,7 +10,9 @@ import {Controller} from '@hotwired/stimulus';
  * Delete this file or adapt it for your use!
  */
 export default class extends Controller {
-	connect() {
-		console.log('I just appeared into existence!');
+	play(event) {
+		event.preventDefault();
+
+		console.log('Playing!');
 	}
 }
