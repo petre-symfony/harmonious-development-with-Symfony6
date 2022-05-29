@@ -16,6 +16,6 @@ class SongController extends AbstractController {
 			'name' => 'Waterfalls',
 			'url' => 'https://symfonycasts.s3.amazonaws.com/sample.mp3',
 		];
-		return new JsonResponse($song);
+		return $this->json($song);
 	}
 }
