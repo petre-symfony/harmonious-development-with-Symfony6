@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class SongController extends AbstractController {
-	#[Route('/api/songs/{id}')]
+	#[Route('/api/songs/{id}', methods: ['GET'])]
 	public function getSong($id): Response {
 		// TODO query the database
 		$song = [
