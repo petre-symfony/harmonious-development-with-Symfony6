@@ -19,8 +19,8 @@ class VinylController extends AbstractController {
 			['song' => 'Fantasy', 'artist' => 'Mariah Carey'],
 		];
 
-		dd($tracks);
-		
+		dump($tracks);
+
 		return $this->render('vinyl/homepage.html.twig', [
 			'title' => 'PB & Jams',
 			'tracks' => $tracks
