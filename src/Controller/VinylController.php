@@ -25,7 +25,7 @@ class VinylController extends AbstractController {
 			'tracks' => $tracks
 		]);
 
-		dd($html);
+		return new Response($html);
 	}
 
 	#[Route('/browse/{slug}', name: 'app_browse')]
