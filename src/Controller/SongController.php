@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SongController extends AbstractController {
 	#[Route('/api/songs/{id}', methods: ['GET'])]
-	public function getSong($id): Response {
+	public function getSong(int $id): Response {
 		// TODO query the database
 		$song = [
 			'id' => $id,
